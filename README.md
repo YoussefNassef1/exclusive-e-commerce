@@ -11,7 +11,6 @@ This is a simple e-commerce website project built with nodeJs expressjs framewor
 - **Payment Processing**: Integration with popular payment gateways for secure and seamless transactions.
 - **Search and Filtering**: Efficient search and filtering functionality to find products based on various criteria.
 - **Admin Panel**: Admin dashboard to manage products, orders, users, and other site settings.
-- **Responsive Design**: Optimized for a seamless user experience across devices of all sizes.
 
 ## Technologies Used
 
