@@ -22,11 +22,12 @@ This is a simple e-commerce website project built with nodeJs expressjs framewor
 ## Technologies Used
 
 - Nodejs: JavaScript runtime built on Chrome's V8 JavaScript engine
-- express:  Node.js web application framework that provides a robust set of features for web and mobile applications. APIs.
+- Express:  Node.js web application framework that provides a robust set of features for web and mobile applications. APIs.
 - Stripe: online payment processing and credit card processing platform for businesses. When a customer buys a product online, the funds need to be delivered to the seller.
 - multer: Node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It makes it easy to handle file uploads in a Node.js application by parsing the incoming request and storing the files in a specified location.
-- Swagger:  Set of open-source tools built around the OpenAPI Specification that can help you design, build, document and consume REST AP
+- Swagger:  Set of open-source tools built around the OpenAPI Specification that can help you design, build, document and consume REST API.
 - MongoDB : a non-relational document database that provides support for JSON-like storage.
+- Express-validator: package that supports data validation and can be used to integrate with the NodeJS express framework to validate API request parameters.
 
 
 
