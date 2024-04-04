@@ -26,6 +26,14 @@ const cartSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+cartSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: "cartItems.product",
+    select: "imageCover name ",
+  });
+  next();
+});
+
 const Cart = mongoose.model("Cart", cartSchema);
 
 module.exports = Cart;

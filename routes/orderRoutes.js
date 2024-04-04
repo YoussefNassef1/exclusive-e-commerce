@@ -16,7 +16,7 @@ const {
 // to protect all routes
 router.use(protect);
 
-router.get("/checkout-session/:cartId", allowedTo("user"), checkOutSessions);
+router.get("/checkout-session/:cartId", allowedTo("admin"), checkOutSessions);
 
 //  create cash order route
 router.post("/:cartId", allowedTo("user"), createCashOrder);
@@ -24,7 +24,7 @@ router.post("/:cartId", allowedTo("user"), createCashOrder);
 // get all orders route
 router.get(
   "/",
-  allowedTo("user", "admin", "manager"),
+  // allowedTo("user", "admin", "manager"),
   filterOrderForLoggedUser,
   getAllOrder
 );

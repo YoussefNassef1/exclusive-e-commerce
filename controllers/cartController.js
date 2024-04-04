@@ -6,6 +6,7 @@ const catchAsync = require("../utils/catchAsync");
 
 exports.addProductCart = catchAsync(async (req, res, next) => {
   const { productId } = req.body;
+  console.log(productId);
   const product = await Product.findById(productId);
   if (!product) {
     return next(
@@ -23,7 +24,7 @@ exports.addProductCart = catchAsync(async (req, res, next) => {
   } else {
     // search for products with products matching
     const productIndex = cart.cartItems.findIndex(
-      (item) => item.product.toString() === productId
+      (item) => item.product._id.toString() === productId
     );
     // product exist in cart, update product quantity
     if (productIndex > -1) {

@@ -74,10 +74,10 @@ exports.getAll = (Model) =>
       .sort();
 
     // Execute query
-    const { mongooseQuery, paginationResult } = apiFeatures;
+    const { mongooseQuery, paginationResults } = apiFeatures;
     const documents = await mongooseQuery;
 
     res
       .status(200)
-      .json({ results: documents.length, paginationResult, data: documents });
+      .json({ results: documents.length, paginationResults, data: documents });
   });
