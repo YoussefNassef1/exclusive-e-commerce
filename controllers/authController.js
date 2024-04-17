@@ -53,7 +53,7 @@ exports.confirmEmail = catchAsync(async (req, res, next) => {
   });
 
   if (!user) {
-    await User.findOneAndDelete({ confirmedExpires: { $lte: Date.now() } });
+    await User.findOneAndDelete({ confirmedExpires: { $lt: Date.now() } });
     return next(new ApiError(" user invalid or token expired", 404));
   }
   user.confirmedEmail = true;
