@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const deletePhoto = (filepath, fileName) => {
-  if (filepath[0] === undefined) {
+  if (filepath[0] === undefined || filepath[0] === "defaultAvatar.png") {
     return;
   }
   let arr = filepath;

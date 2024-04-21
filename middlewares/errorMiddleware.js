@@ -17,7 +17,7 @@ const sendForProd = (err, res) =>
 
 const globalError = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
-  err.status = err.status || "error";
+  err.status = err.status || "error";5
   if (process.env.NODE_ENV === "development") {
     sendForDevelop(err, res);
   } else {

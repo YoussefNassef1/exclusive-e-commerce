@@ -24,12 +24,14 @@ exports.getAllReviewsSpecificProduct = catchAsync(async (req, res, next) => {
   if (!req.body.product) req.body.product = req.params.productId;
 
   const reviews = await Review.find({ product: req.body.product });
-  console.log(reviews);
+
   res.status(200).json({
     message: "Reviews fetched successfully",
     data: reviews,
   });
 });
+
+exports.getReview = handlersFactory.getOne(Review);
 
 exports.updateSpecificReview = handlersFactory.updateOne(Review);
 

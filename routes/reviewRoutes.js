@@ -10,6 +10,7 @@ const {
   createFilterObj,
   updateSpecificReview,
   deleteSpecificReview,
+  getReview,
 } = require("../controllers/reviewController");
 const {
   deleteReviewValidator,
@@ -32,6 +33,7 @@ router
 
 router
   .route("/:id")
+  .get(getReview)
   .put(
     authController.protect,
     authController.allowedTo("user", "admin"),
